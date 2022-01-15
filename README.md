@@ -1,4 +1,4 @@
-# Fex
+# Fex Platform
 with Fex you can design your web document, easyly.
 read 'fex manual.pdf' for additional help.
 
