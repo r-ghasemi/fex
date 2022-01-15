@@ -1,0 +1,93 @@
+%comment1
+\newcommand\c{} 
+%comment2
+\newcommand\cc{#1}
+\newcommand\php{<?php #1 ?>}
+\newcommand\echo{\php{echo #1 ;}}
+
+\newcommand\while*{
+    \if{#1}{
+        \while{#1}{#2}
+    }{#3}
+}
+
+
+\newcommand\html{<!DOCTYPE html><html>#1</html>}
+\newcommand\body{<body #0 style='#2' >#1</body>}
+\newcommand\head{<head>#1</head>}
+\newcommand\section{<section #0 style='#2'>#1</section>}
+\newcommand\title{<title >#1</title>}
+\newcommand\h1{<h1 #0 style='#2'>#1</h1>}
+\newcommand\h2{<h2 #0 style='#2'>#1</h2>}
+\newcommand\h3{<h3 #0 style='#2'>#1</h3>}
+\newcommand\h4{<h4 #0 style='#2'>#1</h4>}
+\newcommand\h5{<h5 #0 style='#2'>#1</h5>}
+\newcommand\h6{<h6 #0 style='#2'>#1</h6>}
+\newcommand\p{<p #0 style='#2' >#1</p>}
+\newcommand\ol{<ol #0 >#1</ol>}
+\newcommand\ul(){<ul>#1</ul>}
+\newcommand\li(){<li #0 style='#2'>#1</li>}
+
+\newcommand\td{<td #0 style='#2' >#1</td>}
+\newcommand\th{<th #0 style='#2' >#1</th>}
+\newcommand\tr {<tr #0 style='#2'>#1</tr>}
+\newcommand\table{<table #0 style='#2'>#1</table>}
+
+\newcommand\a{<a #0 href='#1' style='#3'>#2</a>}
+
+\newcommand\img{<img #0 src='#1' style='#2' />}
+
+\newcommand\b{<b #0 style='#2'>#1</b>}
+
+\newcommand\i{<i #0 style='#2'>#1</i>}
+
+\newcommand\label{<label #0 style='#2'>#1</label>}
+\newcommand\form{<form #0 style='#2'>#1</form>}
+\newcommand\textarea{<textarea #0 style='#2' >#1</textarea>}
+\newcommand\text{<input type='text' #0 style='#2' value='#1' />}
+\newcommand\radio{<input type='radio' #0 style='#2' value='#1' />}
+\newcommand\checkbox{<input type='checkbox' #0 style='#2' value='#1' />}
+\newcommand\file{<input type='file' #0 style='#2' value='#1' />}
+\newcommand\email{<input type='email' #0 style='#2' value='#1' />}
+\newcommand\number{<input type='number' #0 style='#2' value='#1' />}
+\newcommand\tel{<input type='tel' #0 style='#2' value='#1' />}
+\newcommand\password{<input type='password' #0 style='#2' value='#1' />}
+\newcommand\hidden{<input type='hidden' #0 style='#2' value='#1' />}
+\newcommand\select{<select #0 style='#2' >#1</select>}
+\newcommand\option{<option #0 style='#2' value='#3'>#1</option>}
+\newcommand\option*{
+    \if{"#1"=="#2"}
+        {\option(selected){#3}{}{#2}}
+        {\option(){#3}{}{#2}}
+}
+\newcommand\submit{<input type='submit' #0 style='#2' value='#1' />}
+\newcommand\reset{<input type='reset' #0 style='#2' value='#1' />}
+\newcommand\button{<button #0 style='#2' >#1</button>}
+\newcommand\br{<br #0 style='#1' />}
+\newcommand\hr{<hr #0 style='#1' />}
+
+
+\newcommand\span{<span #0 style='#2'>#1</span>}
+\newcommand\div{<div #0 style='#2'>#1</div>}
+\newcommand\center{<center>#1</center>}
+\newcommand\script{<script>#1</script>}
+\newcommand\script*{<script type='text/javascript' src='#1' ></script>}
+
+\newcommand\nav{<nav #0 style='#2'>#1</nav>}
+
+
+\newcommand\style{<style>#1</style>}
+\newcommand\style*{<link rel="stylesheet" href="#1" type="text/css" />}
+\newcommand\favicon{<link rel="shortcut icon" href="#1" type="image/x-icon" />}
+
+\newcommand\document{<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='utf-8' />
+    \title{easysell-#3}
+    #4
+</head>
+<body #0 style='#2' >#1</body>
+</html>
+}

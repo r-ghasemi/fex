@@ -1,0 +1,97 @@
+%comment1
+\newcommand\c{} 
+%comment2
+\newcommand\cc{#1}
+
+\newcommand\php{<?php #1 ?>}
+\newcommand\echo{\php{echo #1 ;}}
+
+\newcommand\while*{
+    \if{#1}{
+        \while{#1}{#2}
+    }{#3}
+}
+
+
+\دستور\سند{<!DOCTYPE html>
+<html>#1</html>
+}
+\دستور\کامنت{}
+\دستور\بدنه{<body #0 style='#2' >#1</body>}
+\دستور\هد{<head>#1</head>}
+
+\دستور\بخش{
+<section #0 style='#2'>#1</section>}
+\دستور\عنوان{<title >#1</title>}
+\دستور\عنوان1{<h1 #0 style='#2'>#1</h1>}
+\دستور\عنوان۱{\عنوان1(#0){#1}{#2}{#3}}
+\دستور\عنوان2{<h2 #0 style='#2'>#1</h2>}
+\دستور\عنوان۲{\عنوان2(#0){#1}{#2}{#3}}
+\دستور\عنوان3{<h3 #0 style='#2'>#1</h3>}
+\دستور\عنوان۳{\عنوان3(#0){#1}{#2}{#3}}
+\دستور\عنوان4{<h4 #0 style='#2'>#1</h4>}
+\دستور\عنوان۴{\عنوان4(#0){#1}{#2}{#3}}
+
+\دستور\پ {<p #0 style='#2' >#1</p>}
+\دستور\پاراگراف{<p #0 style='#2' >#1</p>}
+\دستور\پارا{<p #0 style='#2' >#1</p>}
+
+\دستور\شمارش{<ol #0 >#1</ol>}
+\دستور\لیست(){<ul>#1</ul>}
+\دستور\آیتم(){<li #0 style='#2'>#1</li>}
+\دستور\سلول{<td #0 style='#2' >#1</td>}
+\دستور\ردیف {<tr #0 style='#2'>#1</tr>}
+\دستور\جدول{<table #0 style='#2'>#1</table>}
+
+\دستور\پیوند{<a #0 href='#1' style='#3'>#2</a>}
+\دستور\تصویر{<img #0 src='#1' style='#2' />}
+
+\دستور\بولد{<b #0 style='#2'>#1</b>}
+\دستور\کج{<i #0 style='#2'>#1</i>}
+\دستور\فرم{<form #0 style='#2'>#1</form>}
+\دستور\متنی{<input type='text' #0 style='#2' value='#1' />}
+\دستور\رمزی{<input type='password' #0 style='#2' value='#1' />}
+\دستور\مخفی{<input type='hidden' #0 style='#2' value='#1' />}
+\دستور\ارسال{<input type='submit' #0 style='#2' value='#1' />}
+\دستور\ریست{<input type='reset' #0 style='#2' value='#1' />}
+\دستور\دکمه{<button #0 style='#2' >#1</button>}
+\دستور\باکس{<div #0 style='#2'>#1</div>}
+\دستور\وسط{<center>#1</center>}
+\دستور\کد{<script>#1</script>}
+\دستور\کد*{<script src='#1' ></script>}
+
+\دستور\سندوب{
+\سند{
+	\هد{
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset='utf-8' />
+		\عنوان{#3}
+		#4
+	}
+	\بدنه(#0){#1}{#2}
+}
+
+\دستور\فهرست{
+\باکس#tbldoc{
+<!--  table of contents here-->
+}
+\کد{
+ document.addEventListener('readystatechange',function() {
+	  if (document.readyState!='complete') return ;
+	  
+	  var a=  document.getElementsByTagName('h2');
+	  var tbl=  document.getElementById('tbldoc');
+
+	  for(var i=0; i<a.length; i++) {
+	  	  var d=document.createElement('div');
+	  	  var l=document.createElement('a');
+	  	  a[i].id='h'+i;
+	  	  l.innerText=a[i].innerText;
+	  	  l.href='#h'+i;
+//	  	  d.style.display='inline-block';
+	  	  d.appendChild(l);
+ 		  tbl.appendChild(d);
+	  }
+  });
+}
+}
