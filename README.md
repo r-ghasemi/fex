@@ -4,8 +4,8 @@ read 'fex manual.pdf' for additional help.
 
 # Hello world
 `
-\include{commands.fex}
-\document {
-  Hello World!
-}
+\include{commands.fex}\\
+\document {\\
+  Hello World!\\
+}\\
 `
