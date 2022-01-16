@@ -10,7 +10,7 @@ read 'fex manual.pdf' for additional help.
   Hello World!
 }
 ```
-2. now you can render main.fex in ypur index.php file like this.
+2. now you can render main.fex in your index.php file like this.
 ```
 <?php
   $file= 'main.fex';
